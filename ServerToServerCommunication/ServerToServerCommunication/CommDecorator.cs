@@ -4,18 +4,22 @@ namespace ServerToServerCommunication
 {
     public class CommDecorator : IComm
     {
-        private IComm wrappee;
+        protected IComm _wrappee;
 
-
-        public virtual void Send(DataSource dataSource)
+        public CommDecorator(IComm wrappee)
         {
-            throw new NotImplementedException();
+            _wrappee = wrappee;
+        }
+
+        public virtual void Send(string dataSource)
+        {
+            _wrappee.Send(dataSource);
         }
 
 
-        public virtual void Receive(DataSource dataSource)
+        public virtual void Receive(string dataSource)
         {
-            throw new NotImplementedException();
+            _wrappee.Receive(dataSource);
         }
     }
 }

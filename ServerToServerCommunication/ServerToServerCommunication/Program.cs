@@ -6,7 +6,11 @@ namespace ServerToServerCommunication
     {
         private static void Main(string[] args)
         {
-            Console.WriteLine("");
+            var apiBuilder = new ApiBuilder();
+            apiBuilder.SetThread(4);
+
+            var api = apiBuilder.GetResult();
+            api.SendCommand("hello", "romain");
         }
     }
 }

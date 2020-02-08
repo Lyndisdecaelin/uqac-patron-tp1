@@ -4,14 +4,19 @@ namespace ServerToServerCommunication
 {
     public class ApiBuilder
     {
-        private Api Result;
+        private Api _api = new Api();
+
+        public ApiBuilder()
+        {
+            Reset();
+        }
 
         public void Reset()
         {
-            throw new NotImplementedException();
+            _api = new Api();
         }
 
-        public void SetComm()
+        public void SetComm(String comm)
         {
             throw new NotImplementedException();
         }
@@ -21,14 +26,16 @@ namespace ServerToServerCommunication
             throw new NotImplementedException();
         }
 
-        public void SetThread()
+        public void SetThread(int nbThread)
         {
-            throw new NotImplementedException();
+            _api.NbThread = nbThread;
         }
 
         public Api GetResult()
         {
-            throw new NotImplementedException();
+            var result = _api;
+            Reset();
+            return result;
         }
     }
 }
