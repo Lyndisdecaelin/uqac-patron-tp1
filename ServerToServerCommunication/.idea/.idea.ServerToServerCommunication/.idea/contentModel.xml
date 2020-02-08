@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/.Rider2019.3/system/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/.Rider2019.3/system/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_ServerToServerCommunication.52211855.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="ServerToServerCommunication" t="IncludeRecursive">
+        <e p="Api.cs" t="Include" />
+        <e p="ApiBuilder.cs" t="Include" />
+        <e p="CommDecorator.cs" t="Include" />
+        <e p="CommandExecutor.cs" t="Include" />
+        <e p="ConsoleComm.cs" t="Include" />
+        <e p="Creator.cs" t="Include" />
+        <e p="CreatorConsole.cs" t="Include" />
+        <e p="CreatorHttps.cs" t="Include" />
+        <e p="DataSource.cs" t="Include" />
+        <e p="EncryptionComm.cs" t="Include" />
+        <e p="EventEmitter.cs" t="Include" />
+        <e p="IComm.cs" t="Include" />
+        <e p="ICommand.cs" t="Include" />
+        <e p="ICommandListener.cs" t="Include" />
+        <e p="Program.cs" t="Include" />
+        <e p="SendCommand.cs" t="Include" />
+        <e p="ServerToServerCommunication.csproj" t="IncludeRecursive" />
+        <e p="StringDataSource.cs" t="Include" />
+        <e p="ThreadListener.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="ServerToServerCommunication.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="ServerToServerCommunication.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
