@@ -7,9 +7,10 @@ namespace ServerToServerCommunication
         /// <summary>
         ///     @return
         /// </summary>
-        public IComm CreateComm()
+        public new IComm CreateComm()
         {
-            throw new NotImplementedException();
+            ConsoleComm newConsole = new ConsoleComm();
+            return newConsole;
         }
     }
 }

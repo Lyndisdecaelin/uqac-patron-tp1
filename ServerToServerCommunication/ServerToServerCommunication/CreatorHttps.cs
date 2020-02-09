@@ -1,10 +1,16 @@
+using System;
+
 namespace ServerToServerCommunication
 {
     public class CreatorHttps : Creator
     {
-        public void CreateComm()
+        /// <summary>
+        ///     @return
+        /// </summary>
+        public new IComm CreateComm()
         {
-            // TODO implement here
+            HttpsComm newHttps = new HttpsComm();
+            return newHttps;
         }
     }
 }
