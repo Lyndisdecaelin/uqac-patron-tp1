@@ -8,8 +8,7 @@ namespace ServerToServerCommunication
     {
         public IComm Comm;
         private CommandExecutor _commandExec;
-
-
+       
         public int NbThread
         {
             set => _commandExec = CommandExecutor.GetInstance();

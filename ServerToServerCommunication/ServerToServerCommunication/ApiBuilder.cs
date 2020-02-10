@@ -16,10 +16,24 @@ namespace ServerToServerCommunication
             _api = new Api();
         }
 
-        public void SetComm(String comm)
+        public void setEncrypted()
         {
-            throw new NotImplementedException();
+            _api.Comm = new EncryptionCommDecorator(_api.Comm);
         }
+        public void setCompression()
+        {
+            _api.Comm = new CompressionCommDecorator(_api.Comm);
+        }
+       public void setHttp()
+        {
+            _api.Comm = new CreatorHttps().CreateComm();
+        }
+
+        public void setConsole()
+        {
+            _api.Comm = new CreatorConsole().CreateComm();
+        }
+
 
         public void SetFlux()
         {

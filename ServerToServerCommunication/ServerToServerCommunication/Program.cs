@@ -8,7 +8,8 @@ namespace ServerToServerCommunication
         {
             var apiBuilder = new ApiBuilder();
             apiBuilder.SetThread(4);
-
+            apiBuilder.setConsole();
+            apiBuilder.setCompression();
             var api = apiBuilder.GetResult();
             api.SendCommand("hello", "romain");
         }
