@@ -31,7 +31,6 @@ namespace ServerToServerCommunication
                     Thread.Sleep(3000);
                     Action<string> lambda = result => Comm.Send(result);
                     command = new GreetingCommand(lambda, name);
-
                     break;
                 default:
                     throw new Exception("Not supported command");

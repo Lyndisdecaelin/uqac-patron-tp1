@@ -1,10 +1,10 @@
 ﻿using System;
-
-namespace ServerToServerCommunication
+using ServerToServerCommunication;
+namespace ServerToServer
 {
-    internal class Program
+    class Program
     {
-        private static void Main(string[] args)
+        static void Main(string[] args)
         {
             Console.WriteLine("Programme 8INF859");
             var apiBuilder = new ApiBuilder();
@@ -15,7 +15,6 @@ namespace ServerToServerCommunication
             var api = apiBuilder.GetResult();
             api.SendCommand("hello", "romain");
             Console.ReadKey();
-           
         }
     }
 }
