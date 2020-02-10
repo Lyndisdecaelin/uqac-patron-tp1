@@ -1,7 +1,17 @@
-# uqac-patron-tp1
+﻿# uqac-patron-tp1
 Utiliser notre librairie : 
 
-
+nom de librairie : ServerToServerCommunication
+utilisation : créer une variable apiBuilder
+les parametres peuvent etre : 	setThread(int nb thread)
+				setHttp() pour une communication http
+				setConsole() pour une communiction console
+				setCompression() et setEncrypted() respectivement pour la compression et l'encryption
+note : les protocoles doivent etre set avant les flux, un seul protocole n'est disponible par instance d'api. il n'y a pas de limite aux proprietes de flux.
+utiliset GetResult() pour retouner un objet api avec les parametres precedement definis
+la commande SendCommand permet d'envoyer les commandes definis par la librairie
+actuellement la commande "hello" affiche le message "hello ..." avec comme fin de message le deuxieme parametre de la commande
+NB si le programme fini avant les threads, le resultat des threads n'apparait pas. 
 
 
 Réponses aux questions : 
