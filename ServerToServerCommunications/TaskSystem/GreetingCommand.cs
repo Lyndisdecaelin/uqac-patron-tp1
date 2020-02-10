@@ -1,14 +1,13 @@
 using System;
-using ServerToServerCommunication.TaskSystem;
 
-namespace ServerToServerCommunication
+namespace ServerToServerCommunications.TaskSystem
 {
     public class GreetingCommand : ICommand
     {
         private readonly Action<string> _onFinished;
         private readonly string _name;
         
-        public GreetingCommand(Action<string> onFinished, string name)
+        public GreetingCommand(string name, Action<string> onFinished)
         {
             _onFinished = onFinished;
             _name = name ?? "Unknown";

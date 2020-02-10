@@ -1,7 +1,11 @@
 using System;
+using ServerToServerCommunications.Communication;
 
-namespace ServerToServerCommunication
+namespace ServerToServerCommunications
 {
+    /// <summary>
+    /// Builder to create and configure an Api instance
+    /// </summary>
     public class ApiBuilder
     {
         private Api _api = new Api();
@@ -16,20 +20,20 @@ namespace ServerToServerCommunication
             _api = new Api();
         }
 
-        public void setEncrypted()
+        public void SetEncrypted()
         {
             _api.Comm = new EncryptionCommDecorator(_api.Comm);
         }
-        public void setCompression()
+        public void SetCompression()
         {
             _api.Comm = new CompressionCommDecorator(_api.Comm);
         }
-       public void setHttp()
+       public void SetHttp()
         {
             _api.Comm = new CreatorHttps().CreateComm();
         }
 
-        public void setConsole()
+        public void SetConsole()
         {
             _api.Comm = new CreatorConsole().CreateComm();
         }

@@ -1,6 +1,6 @@
 using System;
 
-namespace ServerToServerCommunication
+namespace ServerToServerCommunications.Communication
 {
     public class CommDecorator : IComm
     {

@@ -1,25 +1,29 @@
 using System;
 using System.Linq;
 using System.Threading;
-using ServerToServerCommunication.TaskSystem;
+using ServerToServerCommunications.Communication;
+using ServerToServerCommunications.TaskSystem;
 
-namespace ServerToServerCommunication
+namespace ServerToServerCommunications
 {
     public class Api
     {
         public IComm Comm;
         private CommandExecutor _commandExec;
-       
-        public int NbThread
-        {
-            set => _commandExec = CommandExecutor.GetInstance();
-        }
-        
 
         public Api()
         {
+            _commandExec = CommandExecutor.GetInstance();
         }
-
+       
+        public int NbThread
+        {
+            set => CommandExecutor.NbThread = value;
+        }
+        
+        /// <summary>
+        /// Executes the appropriate command and sends the result on the communication flow.
+        /// </summary>
         public void SendCommand(string commandName, params string[] parameters)
         {
             ICommand command;
@@ -30,7 +34,7 @@ namespace ServerToServerCommunication
                     Console.WriteLine("Envoi du message ....");
                     Thread.Sleep(3000);
                     Action<string> lambda = result => Comm.Send(result);
-                    command = new GreetingCommand(lambda, name);
+                    command = new GreetingCommand(name, lambda);
                     break;
                 default:
                     throw new Exception("Not supported command");

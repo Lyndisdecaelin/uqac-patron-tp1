@@ -1,13 +1,8 @@
-using System;
-
-namespace ServerToServerCommunication
+namespace ServerToServerCommunications.Communication
 {
     public class CreatorConsole : Creator
     {
-        /// <summary>
-        ///     @return
-        /// </summary>
-        public new IComm CreateComm()
+        public override IComm CreateComm()
         {
             ConsoleComm newConsole = new ConsoleComm();
             return newConsole;

@@ -1,12 +1,12 @@
-﻿using System;
+using System;
 
-namespace ServerToServerCommunication
+namespace ServerToServerCommunications.Communication
 {
-    public class HttpsComm : IComm
+    public class ConsoleComm : IComm
     {
         public void Send(string dataSource)
         {
-            Console.WriteLine("https protocol " + dataSource);
+            Console.WriteLine(dataSource);
         }
 
         public void Receive(string dataSource)

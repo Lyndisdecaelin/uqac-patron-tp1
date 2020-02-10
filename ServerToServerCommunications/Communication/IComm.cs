@@ -1,4 +1,4 @@
-namespace ServerToServerCommunication
+namespace ServerToServerCommunications.Communication
 {
     public interface IComm
     {

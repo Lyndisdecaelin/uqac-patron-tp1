@@ -1,6 +1,6 @@
 using System.Threading;
 
-namespace ServerToServerCommunication.TaskSystem
+namespace ServerToServerCommunications.TaskSystem
 {
     
     /// <summary>
@@ -13,7 +13,7 @@ namespace ServerToServerCommunication.TaskSystem
     {
         private static CommandExecutor _instance;
         
-        private static int NbThread
+        public static int NbThread
         {
             set
             {

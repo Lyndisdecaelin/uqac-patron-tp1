@@ -1,4 +1,4 @@
-namespace ServerToServerCommunication.TaskSystem
+namespace ServerToServerCommunications.TaskSystem
 {
     public interface ICommand
     {
