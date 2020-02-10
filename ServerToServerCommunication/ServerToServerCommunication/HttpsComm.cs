@@ -6,7 +6,7 @@ namespace ServerToServerCommunication
     {
         public void Send(string dataSource)
         {
-            Console.WriteLine("https protocol" + dataSource);
+            Console.WriteLine("https protocol " + dataSource);
         }
 
         public void Receive(string dataSource)
