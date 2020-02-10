@@ -15,6 +15,7 @@ namespace ServerToServerCommunication
             var api = apiBuilder.GetResult();
             api.SendCommand("hello", "romain");
             Console.ReadKey();
+           
         }
     }
 }

@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using System.Threading;
 using ServerToServerCommunication.TaskSystem;
 
 namespace ServerToServerCommunication
@@ -26,9 +27,11 @@ namespace ServerToServerCommunication
             {
                 case "hello":
                     var name = parameters.Any() ? parameters[0] : null;
+                    Console.WriteLine("Envoi du message ....");
+                    Thread.Sleep(3000);
                     Action<string> lambda = result => Comm.Send(result);
-
                     command = new GreetingCommand(lambda, name);
+
                     break;
                 default:
                     throw new Exception("Not supported command");
