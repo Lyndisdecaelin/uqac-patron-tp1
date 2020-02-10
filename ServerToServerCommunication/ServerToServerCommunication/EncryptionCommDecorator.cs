@@ -8,13 +8,13 @@ namespace ServerToServerCommunication
         {
         }
 
-        public new void Send(string dataSource)
+        public override void Send(string dataSource)
         {
-            _wrappee.Send("ENCRYPTION" + dataSource);
+            _wrappee.Send("ENCRYPTION " + dataSource);
         }
 
 
-        public new void Receive(string dataSource)
+        public override void Receive(string dataSource)
         {
             throw new NotImplementedException();
         }

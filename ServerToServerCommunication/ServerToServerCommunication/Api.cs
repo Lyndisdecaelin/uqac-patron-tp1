@@ -26,7 +26,8 @@ namespace ServerToServerCommunication
             {
                 case "hello":
                     var name = parameters.Any() ? parameters[0] : null;
-                    Action<string> lambda = result => Console.WriteLine(result);
+                    Action<string> lambda = result => Comm.Send(result);
+
                     command = new GreetingCommand(lambda, name);
                     break;
                 default:
